@@ -1,0 +1,46 @@
+[
+    {
+        "id": "1",
+        "period": "2023 — Present",
+        "title": "Senior Software Engineer",
+        "company": "Tech Company",
+        "companyUrl": "#",
+        "description": "Build and maintain critical components used to construct the company's frontend. Work closely with cross-functional teams to implement best practices in web development.",
+        "tags": [
+            "JavaScript",
+            "TypeScript",
+            "React",
+            "Svelte",
+            "Node.js"
+        ]
+    },
+    {
+        "id": "2",
+        "period": "2021 — 2023",
+        "title": "Software Engineer",
+        "company": "Startup Inc",
+        "companyUrl": "#",
+        "description": "Developed and maintained web applications for clients. Built design systems and component libraries for improved developer experience.",
+        "tags": [
+            "Vue.js",
+            "TypeScript",
+            "Tailwind CSS",
+            "PostgreSQL"
+        ]
+    },
+    {
+        "id": "3",
+        "period": "2019 — 2021",
+        "title": "Frontend Developer",
+        "company": "Digital Agency",
+        "companyUrl": "#",
+        "description": "Created responsive, pixel-perfect websites from design mockups. Optimized site performance and implemented SEO best practices.",
+        "tags": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "WordPress",
+            "PHP"
+        ]
+    }
+]

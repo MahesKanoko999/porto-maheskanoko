@@ -1,0 +1,16 @@
+{
+	"name": "Boss Mahes",
+	"title": "Software Engineer",
+	"bio": "I build pixel-perfect, engaging, and accessible digital experiences.",
+	"about": [
+		"I'm a passionate software engineer who loves building things for the web. My interest in web development started back in 2015 when I decided to try creating custom themes — turns out hacking together HTML & CSS taught me a lot about coding!",
+		"Fast-forward to today, and I've had the privilege of working at various companies, building software for diverse clients. My main focus these days is creating accessible, pixel-perfect user interfaces that not only look great but also provide seamless user experiences.",
+		"When I'm not at the computer, I'm usually exploring new places, reading tech blogs, or experimenting with new technologies."
+	],
+	"social": {
+		"github": "https://github.com/maheskanoko",
+		"linkedin": "https://linkedin.com/in/maheskanoko",
+		"instagram": "https://instagram.com/maheskanoko",
+		"email": "hello@maheskanoko.com"
+	}
+}

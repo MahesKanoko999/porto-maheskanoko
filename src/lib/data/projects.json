@@ -1,0 +1,58 @@
+[
+    {
+        "id": "1",
+        "title": "Portfolio Website",
+        "description": "A modern portfolio website built with SvelteKit and Tailwind CSS. Features smooth animations, dark theme, and responsive design.",
+        "image": "",
+        "url": "#",
+        "github": "https://github.com/maheskanoko/portfolio",
+        "tags": [
+            "SvelteKit",
+            "Tailwind CSS",
+            "GSAP",
+            "TypeScript"
+        ]
+    },
+    {
+        "id": "2",
+        "title": "E-Commerce Platform",
+        "description": "Full-stack e-commerce solution with product management, cart functionality, and payment integration.",
+        "image": "",
+        "url": "#",
+        "github": "#",
+        "tags": [
+            "Next.js",
+            "Node.js",
+            "PostgreSQL",
+            "Stripe"
+        ]
+    },
+    {
+        "id": "3",
+        "title": "Task Management App",
+        "description": "A collaborative task management application with real-time updates, drag-and-drop functionality, and team features.",
+        "image": "",
+        "url": "#",
+        "github": "#",
+        "tags": [
+            "React",
+            "Firebase",
+            "Material UI",
+            "Redux"
+        ]
+    },
+    {
+        "id": "4",
+        "title": "Weather Dashboard",
+        "description": "Real-time weather dashboard with location-based forecasts, interactive maps, and weather alerts.",
+        "image": "",
+        "url": "#",
+        "github": "#",
+        "tags": [
+            "Vue.js",
+            "OpenWeather API",
+            "Chart.js",
+            "Leaflet"
+        ]
+    }
+]

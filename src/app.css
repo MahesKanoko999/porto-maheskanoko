@@ -1,0 +1,343 @@
+@import 'tailwindcss';
+
+/* ================================
+   CSS Variables - Brittany Chiang Inspired
+   ================================ */
+:root {
+	/* Colors */
+	--color-bg: #0a192f;
+	--color-bg-light: #112240;
+	--color-bg-lighter: #233554;
+	--color-primary: #64ffda;
+	--color-text: #8892b0;
+	--color-text-light: #a8b2d1;
+	--color-text-lighter: #ccd6f6;
+	--color-white: #e6f1ff;
+
+	/* Typography */
+	--font-mono: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+	--font-sans: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif;
+
+	/* Transitions */
+	--transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+/* ================================
+   Base Styles
+   ================================ */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 16px;
+	scroll-behavior: smooth;
+	scrollbar-width: thin;
+	scrollbar-color: var(--color-bg-lighter) var(--color-bg);
+}
+
+body {
+	font-family: var(--font-sans);
+	color: var(--color-text);
+	background-color: var(--color-bg);
+	line-height: 1.6;
+	min-height: 100vh;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/* Selection */
+::selection {
+	background-color: var(--color-bg-lighter);
+	color: var(--color-text-lighter);
+}
+
+/* Links */
+a {
+	color: var(--color-primary);
+	text-decoration: none;
+	transition: var(--transition);
+}
+
+a:hover {
+	color: var(--color-primary);
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: var(--color-text-lighter);
+	font-weight: 600;
+	line-height: 1.1;
+}
+
+p {
+	margin-bottom: 1rem;
+}
+
+/* ================================
+   Main Layout
+   ================================ */
+.main-container {
+	display: flex;
+	max-width: 1400px;
+	min-height: 100vh;
+	margin: 0 auto;
+	padding: 0 100px;
+	gap: 80px;
+}
+
+/* Sidebar - Sticky Left */
+.sidebar {
+	position: sticky;
+	top: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 45%;
+	max-width: 500px;
+	max-height: 100vh;
+	padding: 120px 0;
+	padding-right: 40px;
+}
+
+/* Content - Scrollable Right */
+.content {
+	width: 55%;
+	flex: 1;
+	padding: 120px 0;
+}
+
+/* ================================
+   Mouse Spotlight Effect
+   ================================ */
+.spotlight {
+	pointer-events: none;
+	position: fixed;
+	inset: 0;
+	z-index: 30;
+	transition: background 0.3s ease;
+	background: radial-gradient(600px at var(--mouse-x, 50%) var(--mouse-y, 50%),
+			rgba(29, 78, 216, 0.15),
+			transparent 80%);
+}
+
+/* ================================
+   Sections
+   ================================ */
+section {
+	margin-bottom: 100px;
+	scroll-margin-top: 100px;
+}
+
+.section-heading {
+	position: sticky;
+	top: 0;
+	z-index: 20;
+	margin-bottom: 40px;
+	padding: 20px 0;
+	background-color: rgba(10, 25, 47, 0.85);
+	backdrop-filter: blur(10px);
+	font-size: 0.875rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	color: var(--color-text-lighter);
+}
+
+/* ================================
+   Cards / Items
+   ================================ */
+.card {
+	position: relative;
+	display: grid;
+	grid-template-columns: 100px 1fr;
+	gap: 16px;
+	padding: 24px;
+	margin-bottom: 12px;
+	border-radius: 8px;
+	transition: var(--transition);
+	cursor: pointer;
+}
+
+.card:hover {
+	background-color: rgba(100, 255, 218, 0.05);
+}
+
+.card:hover .card-title {
+	color: var(--color-primary);
+}
+
+.card-date {
+	font-family: var(--font-mono);
+	font-size: 0.75rem;
+	color: var(--color-text);
+	text-transform: uppercase;
+	padding-top: 4px;
+}
+
+.card-title {
+	font-size: 1rem;
+	font-weight: 500;
+	color: var(--color-text-lighter);
+	transition: var(--transition);
+	margin-bottom: 8px;
+}
+
+.card-title a {
+	color: inherit;
+}
+
+.card-title a:hover {
+	color: var(--color-primary);
+}
+
+.card-company {
+	color: var(--color-text-light);
+}
+
+.card-description {
+	font-size: 0.875rem;
+	color: var(--color-text);
+	line-height: 1.5;
+	margin-bottom: 12px;
+}
+
+/* Tags */
+.tags {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+}
+
+.tag {
+	font-family: var(--font-mono);
+	font-size: 0.75rem;
+	padding: 4px 12px;
+	border-radius: 9999px;
+	background-color: rgba(100, 255, 218, 0.1);
+	color: var(--color-primary);
+}
+
+/* ================================
+   Navigation
+   ================================ */
+.nav-list {
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	margin-top: 60px;
+}
+
+.nav-item a {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	font-size: 0.75rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	color: var(--color-text);
+	transition: var(--transition);
+}
+
+.nav-item a:hover,
+.nav-item a.active {
+	color: var(--color-text-lighter);
+}
+
+.nav-line {
+	width: 32px;
+	height: 1px;
+	background-color: var(--color-text);
+	transition: var(--transition);
+}
+
+.nav-item a:hover .nav-line,
+.nav-item a.active .nav-line {
+	width: 64px;
+	background-color: var(--color-text-lighter);
+}
+
+/* ================================
+   Social Links
+   ================================ */
+.social-links {
+	display: flex;
+	gap: 24px;
+	margin-top: 0;
+	padding-top: 20px;
+}
+
+.social-links a {
+	color: var(--color-text);
+	transition: var(--transition);
+	opacity: 1 !important;
+}
+
+.social-links a:hover {
+	color: var(--color-primary);
+	transform: translateY(-3px);
+}
+
+.social-links svg {
+	width: 24px;
+	height: 24px;
+	stroke: currentColor;
+	fill: none;
+}
+
+/* ================================
+   Responsive
+   ================================ */
+@media (max-width: 1200px) {
+	.main-container {
+		padding: 0 100px;
+	}
+}
+
+@media (max-width: 1024px) {
+	.main-container {
+		padding: 0 50px;
+	}
+}
+
+@media (max-width: 768px) {
+	.main-container {
+		flex-direction: column;
+		padding: 0 25px;
+	}
+
+	.sidebar {
+		position: relative;
+		width: 100%;
+		max-height: none;
+		padding: 100px 0 50px;
+	}
+
+	.content {
+		width: 100%;
+		padding: 50px 0 100px;
+	}
+
+	.section-heading {
+		display: block;
+	}
+
+	.card {
+		grid-template-columns: 1fr;
+	}
+
+	.card-date {
+		margin-bottom: 8px;
+	}
+}
